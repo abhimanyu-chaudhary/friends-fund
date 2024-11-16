@@ -9,10 +9,11 @@ import Pricing from "../components/Sections/Pricing";
 import Contact from "../components/Sections/Contact";
 import Footer from "../components/Sections/Footer"
 import Testimonials from "../components/Sections/Testimonials";
+import { Route, Routes} from "react-router-dom";
+import Login from "../components/Login/Login";
 
-export default function Landing() {
-  return (
-    <>
+const MainLayout = () => (
+ <>
       <TopNavbar />
       <Header />
       <Services />
@@ -22,6 +23,16 @@ export default function Landing() {
       <Pricing />
       <Contact />
       <Footer />
+ </>
+);
+
+export default function Landing() {
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<MainLayout />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </>
   );
 }

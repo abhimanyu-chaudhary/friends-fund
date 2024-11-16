@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
+import { Route, Routes, Link as RouterLink } from "react-router-dom";
+
 // Components
 import Sidebar from "../Nav/Sidebar";
 import Backdrop from "../Elements/Backdrop";
 // Assets
 import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
-import Login from "../Login/Login";
+
 
 export default function TopNavbar() {
   const [y, setY] = useState(window.scrollY);
@@ -70,18 +72,18 @@ export default function TopNavbar() {
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer">
-              <Link to={Login} style={{ padding: "10px 30px 10px 0" }}>
+              <RouterLink to="/login" style={{ padding: "10px 30px 10px 0" }}>
                 Log in
-              </Link>
+              </RouterLink>
             </li>
             <li className="semiBold font15 pointer flexCenter">
-              <a href="/" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
+              <RouterLink to="/started" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
                 Get Started
-              </a>
+              </RouterLink>
             </li>
           </UlWrapperRight>
         </NavInner>
-      </Wrapper>
+      </Wrapper>     
     </>
   );
 }
