@@ -6,7 +6,7 @@ function Dashboard() {
     const navigate = useNavigate();
     const handleLogout = async () => {
         await supabase.auth.signOut();
-        navigate("/");
+        navigate("/login");
     };
 
 
@@ -14,7 +14,7 @@ function Dashboard() {
     <div className='h-screen text-center text-4xl font-bold py-[20%]'>
         <h2>Dashboard</h2>
       <h1 >You are Logged IN</h1>
-      <button className='my-10 bg-red-300 p-7 rounded-md' onClick={()=>handleLogout}>Sign Out</button>
+      <button className='my-10 bg-red-300 p-7 rounded-md' onClick={handleLogout}>Sign Out</button>
     </div>
   )
 }

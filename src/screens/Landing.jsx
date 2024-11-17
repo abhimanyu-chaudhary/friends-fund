@@ -38,7 +38,7 @@ export default function Landing() {
             <Route path="/" element={<MainLayout />} />
             <Route path="/login" element={<Login />} />
             <Route element={<PrivateRoute />} >
-              <Route path="/dashboard" element={<Dashboard />} />
+               <Route path="/dashboard" element={<Dashboard />} />
             </Route>
           </Routes>
         </AuthProvider>

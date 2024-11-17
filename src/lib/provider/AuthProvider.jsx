@@ -10,12 +10,12 @@ const AuthProvider = ({ children }) => {
   const loginAction = async (data) => {
     // Implement your login logic here
     // On successful login:
-    setUser (data.user);
+    setUser(data.user);
     navigate("/dashboard");
   };
 
   const logOut = () => {
-    setUser (null);
+    setUser(null);
     navigate("/login");
   };
 
