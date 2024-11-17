@@ -1,13 +1,12 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
-import { supabase } from "../../lib/helper/supabaseClient";  // Import your Supabase client
+import React from "react";
+import { useAuth } from "../../lib/provider/AuthProvider";
 
 function Dashboard() {
-    const navigate = useNavigate();
-    const handleLogout = async () => {
-        await supabase.auth.signOut();
-        navigate("/login");
-    };
+    const { logOut } = useAuth(); // Use the logOut method from AuthProvider
+
+  const handleLogout = async () => {
+    await logOut(); // Calls the centralized logout function
+  };
 
 
   return (

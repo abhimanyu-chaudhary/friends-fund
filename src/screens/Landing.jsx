@@ -14,7 +14,7 @@ import Login from "../components/Login/Login";
 import Dashboard from "../components/Dashboard/Dashboard";
 import AuthProvider from "../lib/provider/AuthProvider";
 import PrivateRoute from "../lib/provider/PrivateRoute";
-
+import Error from "../components/Sections/Error";
 const MainLayout = () => (
  <>
       <TopNavbar />
@@ -40,6 +40,7 @@ export default function Landing() {
             <Route element={<PrivateRoute />} >
                <Route path="/dashboard" element={<Dashboard />} />
             </Route>
+            <Route path="*" element={<Error />} />
           </Routes>
         </AuthProvider>
       </>
