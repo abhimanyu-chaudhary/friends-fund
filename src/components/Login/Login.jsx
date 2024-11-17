@@ -11,7 +11,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      await loginAction(email, password); // Call loginAction
+      await loginAction({email, password}); // Call loginAction
     } catch (err) {
       setError(err.message); // Capture and display error
     }
