@@ -9,8 +9,11 @@ import Pricing from "../components/Sections/Pricing";
 import Contact from "../components/Sections/Contact";
 import Footer from "../components/Sections/Footer"
 import Testimonials from "../components/Sections/Testimonials";
-import { Route, Routes} from "react-router-dom";
+import { Route, Router, Routes} from "react-router-dom";
 import Login from "../components/Login/Login";
+import Dashboard from "../components/Dashboard/Dashboard";
+import AuthProvider from "../lib/provider/AuthProvider";
+import PrivateRoute from "../lib/provider/PrivateRoute";
 
 const MainLayout = () => (
  <>
@@ -29,10 +32,17 @@ const MainLayout = () => (
 export default function Landing() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<MainLayout />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
+      <>
+        <AuthProvider>
+          <Routes>
+            <Route path="/" element={<MainLayout />} />
+            <Route path="/login" element={<Login />} />
+            <Route element={<PrivateRoute />} >
+              <Route path="/dashboard" element={<Dashboard />} />
+            </Route>
+          </Routes>
+        </AuthProvider>
+      </>
     </>
   );
 }
