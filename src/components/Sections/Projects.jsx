@@ -168,6 +168,14 @@ const AddRight = styled.div`
   @media (max-width: 860px) {
     width: 80%;
     order: 2;
+    text-align: center;
+    h2 {
+      line-height: 3rem;
+      margin: 15px 0;
+    }
+    p {
+      margin: 0 auto;
+    }
   }
 `;
 const AddLeftInner = styled.div`
