@@ -4,6 +4,8 @@ import { Link } from "react-scroll";
 // Assets
 import CloseIcon from "../../assets/svg/CloseIcon";
 import LogoIcon from "../../assets/svg/Logo";
+import { Route, Routes, Link as RouterLink } from "react-router-dom";
+
 
 export default function Sidebar({ sidebarOpen, toggleSidebar }) {
   return (
@@ -108,14 +110,14 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
       </UlStyle>
       <UlStyle className="flexSpaceCenter">
         <li className="semiBold font15 pointer">
-          <a href="/" style={{ padding: "10px 30px 10px 0" }} className="whiteColor">
+          <RouterLink to="/login" style={{ padding: "10px 30px 10px 0" }} className="whiteColor">
             Log in
-          </a>
+          </RouterLink>
         </li>
         <li className="semiBold font15 pointer flexCenter">
-          <a href="/" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
+          <RouterLink to="/login" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
             Get Started
-          </a>
+          </RouterLink>
         </li>
       </UlStyle>
     </Wrapper>
