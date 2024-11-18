@@ -11,8 +11,8 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
           <LogoIcon />
-          <h1 className="whiteColor font20" style={{ marginLeft: "15px" }}>
-            fanatic
+          <h1 className="whiteColor font20 font-bold" style={{ marginLeft: "15px" }}>
+            Friend's Fund
           </h1>
         </div>
         <CloseBtn onClick={() => toggleSidebar(!sidebarOpen)} className="animate pointer">
@@ -46,7 +46,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             smooth={true}
             offset={-60}
           >
-            Services
+            About
           </Link>
         </li>
         <li className="semiBold font15 pointer">
@@ -60,7 +60,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             smooth={true}
             offset={-60}
           >
-            Projects
+            Events
           </Link>
         </li>
         <li className="semiBold font15 pointer">
@@ -69,12 +69,12 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="blog"
+            to="features"
             spy={true}
             smooth={true}
             offset={-60}
           >
-            Blog
+            Features
           </Link>
         </li>
         <li className="semiBold font15 pointer">
@@ -83,12 +83,12 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="pricing"
+            to="testimonials"
             spy={true}
             smooth={true}
             offset={-60}
           >
-            Pricing
+            Testimonials
           </Link>
         </li>
         <li className="semiBold font15 pointer">

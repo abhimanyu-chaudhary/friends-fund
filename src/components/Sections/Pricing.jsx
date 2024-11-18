@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 // Components
 import PricingTable from "../Elements/PricingTable";
+import { FaUserTie } from "react-icons/fa";
 
 export default function Pricing() {
   return (
@@ -9,61 +10,81 @@ export default function Pricing() {
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Check Our Pricing</h1>
+            <h1 className="font40 extraBold">Our Members</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            Meet the incredible individuals who make up our close-knit community. Each member brings their unique 
               <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              charm, stories, and memories that keep our bond strong and unbreakable. Together, we celebrate friendship
+              <br/>
+              and cherish moments that last a lifetime.
             </p>
           </HeaderInfo>
           <TablesWrapper className="flexSpaceNull">
             <TableBox>
-              <PricingTable
-                icon="roller"
-                price="$29,99/mo"
-                title="Starter"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                offers={[
-                  { name: "Product Offer", cheked: true },
-                  { name: "Offer", cheked: true },
-                  { name: "Product Offer #2", cheked: false },
-                  { name: "Product", cheked: false },
-                  { name: "Product Offer", cheked: false },
-                ]}
-                action={() => alert("clicked")}
-              />
+              <div className="h-full rounded-[15px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+                <div className="p-8 flex flex-col gap-9">
+                  <div className="flex gap-4 font-semibold bg-gray-100 h-20 items-center pl-2 rounded-[8px]">
+                    <FaUserTie className="text-3xl"/>
+                    <h3>Abhimanyu Chaudhary</h3>
+                  </div>
+                  <div className="flex gap-4 font-semibold bg-gray-100 h-20 items-center pl-2 rounded-[8px]">
+                    <FaUserTie className="text-3xl"/>
+                    <h3>Abhinav Anand</h3>
+                  </div>
+                  <div className="flex gap-4 font-semibold bg-gray-100 h-20 items-center pl-2 rounded-[8px]">
+                    <FaUserTie className="text-3xl"/>
+                    <h3>Ajit Kumar Yadav</h3>
+                  </div>
+                  <div className="flex gap-4 font-semibold bg-gray-100 h-20 items-center pl-2 rounded-[8px]">
+                    <FaUserTie className="text-3xl"/>
+                    <h3>Amrit Bikram Sah</h3>
+                  </div>
+                </div>
+              </div>
             </TableBox>
             <TableBox>
-              <PricingTable
-                icon="monitor"
-                price="$49,99/mo"
-                title="Basic"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                offers={[
-                  { name: "Product Offer", cheked: true },
-                  { name: "Offer", cheked: true },
-                  { name: "Product Offer #2", cheked: true },
-                  { name: "Product", cheked: true },
-                  { name: "Product Offer", cheked: false },
-                ]}
-                action={() => alert("clicked")}
-              />
+              <div className="h-full rounded-[15px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+              <div className="p-8 flex flex-col gap-9">
+                  <div className="flex gap-4 font-semibold bg-gray-100 h-20 items-center pl-2 rounded-[8px]">
+                    <FaUserTie className="text-3xl"/>
+                    <h3>Bikash Shrestha</h3>
+                  </div>
+                  <div className="flex gap-4 font-semibold bg-gray-100 h-20 items-center pl-2 rounded-[8px]">
+                    <FaUserTie className="text-3xl"/>
+                    <h3>Krishna Chandra Mandal</h3>
+                  </div>
+                  <div className="flex gap-4 font-semibold bg-gray-100 h-20 items-center pl-2 rounded-[8px]">
+                    <FaUserTie className="text-3xl"/>
+                    <h3>Kunal Mishra</h3>
+                  </div>
+                  <div className="flex gap-4 font-semibold bg-gray-100 h-20 items-center pl-2 rounded-[8px]">
+                    <FaUserTie className="text-3xl"/>
+                    <h3>Prem Kant Sharma</h3>
+                  </div>
+                </div>
+              </div>
             </TableBox>
             <TableBox>
-              <PricingTable
-                icon="browser"
-                price="$59,99/mo"
-                title="Golden"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                offers={[
-                  { name: "Product Offer", cheked: true },
-                  { name: "Offer", cheked: true },
-                  { name: "Product Offer #2", cheked: true },
-                  { name: "Product", cheked: true },
-                  { name: "Product Offer", cheked: true },
-                ]}
-                action={() => alert("clicked")}
-              />
+              <div className="h-full rounded-[15px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+              <div className="p-8 flex flex-col gap-9">
+                  <div className="flex gap-4 font-semibold bg-gray-100 h-20 items-center pl-2 rounded-[8px]">
+                    <FaUserTie className="text-3xl"/>
+                    <h3>Rajat Prasad Gupta</h3>
+                  </div>
+                  <div className="flex gap-4 font-semibold bg-gray-100 h-20 items-center pl-2 rounded-[8px]">
+                    <FaUserTie className="text-3xl"/>
+                    <h3>Rajesh Sada</h3>
+                  </div>
+                  <div className="flex gap-4 font-semibold bg-gray-100 h-20 items-center pl-2 rounded-[8px]">
+                    <FaUserTie className="text-3xl"/>
+                    <h3>Ramji Sada</h3>
+                  </div>
+                  <div className="flex gap-4 font-semibold bg-gray-100 h-20 items-center pl-2 rounded-[8px]">
+                    <FaUserTie className="text-3xl"/>
+                    <h3>Ravi Shah</h3>
+                  </div>
+                </div>
+              </div>
             </TableBox>
           </TablesWrapper>
         </div>
